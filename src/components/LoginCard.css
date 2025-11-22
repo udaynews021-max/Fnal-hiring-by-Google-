@@ -1,0 +1,260 @@
+.login-card {
+    display: flex;
+    width: 900px;
+    height: 600px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--glass-border);
+}
+
+/* Left Section */
+.form-section {
+    flex: 1;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+    background: var(--card-bg);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.close-btn:hover {
+    background: var(--glass-border);
+    color: var(--text-primary);
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.user-type-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.forgot-password {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.forgot-password:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+/* Soft 3D Button Styles */
+.sign-in-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+    color: white;
+    font-weight: 600;
+    border-radius: 24px;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sign-in-btn:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.12),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sign-in-btn:active {
+    transform: translateY(0);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+.demo-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.demo-btn {
+    flex: 1;
+    padding: 8px 12px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    font-size: 11px;
+    font-weight: 600;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.demo-btn:hover {
+    background: var(--glass-border);
+    color: var(--text-primary);
+    border-color: var(--glass-border);
+    transform: translateY(-1px);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.12),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.demo-btn:active {
+    transform: translateY(0);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Right Section - Overlay */
+.overlay-section {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(96, 165, 250, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-left: 1px solid var(--glass-border);
+}
+
+/* Decorative circles/shapes for the overlay */
+.overlay-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(96, 165, 250, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.overlay-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.overlay-content {
+    text-align: center;
+    color: var(--text-primary);
+    padding: 40px;
+    z-index: 2;
+    line-height: 1.5;
+}
+
+.sign-up-btn {
+    padding: 10px 40px;
+    background: var(--card-bg);
+    color: var(--text-primary);
+    font-weight: 600;
+    border-radius: 24px;
+    font-size: 13px;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 1px 2px rgba(0, 0, 0, 0.06);
+    transition: all 0.2s;
+    border: 1px solid var(--glass-border);
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+}
+
+.sign-up-btn:hover {
+    transform: translateY(-1px);
+    background: var(--glass-border);
+    border-color: var(--glass-border);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.12),
+        0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.sign-up-btn:active {
+    transform: translateY(0);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        0 1px 1px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive adjustments */
+@media (max-width: 950px) {
+    .login-card {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        max-width: 500px;
+    }
+
+    .overlay-section {
+        display: none;
+        /* Hide overlay on mobile as per common pattern, or stack it */
+    }
+}
